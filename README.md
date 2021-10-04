@@ -13,7 +13,7 @@ This method has been applied in the following papers:
 
 There will be slight differences in the data structure of the EEG signal, so please refer to the details in the first paper (https://doi.org/10.3389/fnins.2018.00308), where this code was first presented, to understand the implementation process of this method. Here we only use the following figure to show the process of this method (Figure 3 in the second paper: https://doi.org/10.1109/ACCESS.2019.2895133).
 
-![](https://github.com/ffbear1993/augmentation-emd/blob/main/pics/process.gif)
+![](https://github.com/ffbear1993/aritificial-signal-method-with-emd/blob/main/pics/process.gif)
 
 Mixing modes strategy for creating artificial EEG frames. In this example we can see that the new artificial frame is created by summing together the IMF-1 from original frame 2, the IMF-2 from original frame 1, the IMF-3 from original frame 3... and the IMF-N from original frame M.
 
@@ -21,7 +21,7 @@ Mixing modes strategy for creating artificial EEG frames. In this example we can
 
 The source code is available on GitHub. To download the code you can either go to the source code page and click `Code -> Download ZIP`, or use git command line
 
- `$ git clone https://github.com/ffbear1993/augmentation-emd.git`
+ `$ git clone https://github.com/ffbear1993/aritificial-signal-method-with-emd.git`
 
 We provide two implementations, python version and matlab version.
 
