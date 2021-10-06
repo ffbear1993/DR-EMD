@@ -1,8 +1,8 @@
-## Artificial signal generation method based on EMD and variants
+## drEMD: Data augmentation based on a decomposition-recombination strategy through EMD
 
 ### Introduction
 
-This is an artificial frame generation method using the empirical mode decomposition (EMD) for EEG-based motor imagery BCI and other EEG-type signals.
+It is a method of generating artificial signals through empirical mode decomposition (EMD) and subsequent recombination, originally developed for BCI of EEG-based motor imagery and other EEG-type signals, but which can be extended to any other type of signals/data.
 
 This method has been applied in the following papers:
 
@@ -11,7 +11,7 @@ This method has been applied in the following papers:
 - Zhang, Z., Duan, F., Solé-Casals, J., Dinarès-Ferran, J., Cichocki, A., Yang, Z., & Sun, Z. (2019). A novel deep learning approach with data augmentation to classify motor imagery signals. *IEEE Access*, *7*, 15945-15954.
 - Li, B., Zhang, Z., Duan, F., Yang, Z., Zhao, Q., Sun, Z., & Solé-Casals, J. (2021). Component-mixing Strategy: A Decomposition-based Data Augmentation Algorithm for Motor Imagery Signals. *Neurocomputing*.
 
-There will be slight differences in the data structure of the EEG signal, so please refer to the details in the first paper (https://doi.org/10.3389/fnins.2018.00308), where this code was first presented, to understand the implementation process of this method. Here we only use the following figure to show the process of this method (Figure 3 in the second paper: https://doi.org/10.1109/ACCESS.2019.2895133).
+There will be slight differences in the data structure of the EEG signal, so please refer to the details in the first paper (https://doi.org/10.3389/fnins.2018.00308), where this code was first introduced, to understand the implementation process of this method. Here we only use the following figure to show the process of this method (Figure 3 in the second paper: https://doi.org/10.1109/ACCESS.2019.2895133).
 
 ![](https://github.com/ffbear1993/aritificial-signal-method-with-emd/blob/main/pics/process.gif)
 
