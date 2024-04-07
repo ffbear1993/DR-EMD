@@ -66,8 +66,11 @@ For both PYTHON and MATLAB code, the function `create_artificial_frames` receive
 - numOfFrames: Number of artificial frames you want to generate.
 - imf: IMFs of the real frames in a two-dimensional cell array [frames, channel], (`toy_data.mat` should be referenced here)
 - indexIMFs: Vector with the IMFs you want to use to generate the new frames.
+- seed: Optional parameter if you want to generate the same permutations.
 
-If you want to apply this method on your own data, you can reuse `./augment/toy_example.py` or `./augment/toyExample.m` and replace the input parameters. In these `toy_example` code, we want to use the first 5 frames with the first 3 IMFs to generate 100 artificial frames, so you can customize which frames or IMFs are used to generate the artificial signal frames. 
+For matlab users, we provide a full process from building toy signals (num_samples, num_frames, num_channels) to creating artificial signals in `./augment/toyExample1.m`.
+
+If you want to apply this method on your own data, you can reuse `./augment/toy_example.py` or `./augment/toyExample1.m` or `./augment/toyExample2.m` and replace the input parameters. In these `toy_example` code, we want to use the first 5 frames with the first 3 IMFs to generate 100 artificial frames, so you can customize which frames or IMFs are used to generate the artificial signal frames. 
 
 ### Contact 
 

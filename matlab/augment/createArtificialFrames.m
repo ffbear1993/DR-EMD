@@ -2,7 +2,7 @@
 %
 % Description of the function:
 %
-% artificialFrames = createArtificialFrames(setOfFrames, numOfFrames, imf, indexIMFs);
+% artificialFrames = createArtificialFrames(setOfFrames, numOfFrames, imf, indexIMFs, seed);
 %
 % Output:
 %  1.Tensor containing the new frames, organized as [frames, samples, channels]
@@ -14,6 +14,7 @@
 % 4. Vector with the IMFs you want to use to generate the new frames.
 %    For example: if you indicate [2 3 4 5] then these four MFIs would only be used to create the artificial frames.
 %    Another example: 1:15 would take all IMFs up to 15 (usually EEG from motor imaging only have up to 10 or 11 IMFs, but you can change this value)%
+% 5. (Optional) rng(seed) for randperm() when you want to generate the same permutations.
 %
 %
 % This code was firts presented in the following paper:
@@ -35,8 +36,12 @@
 % Catalonia, July 2018
 
 %%
-function artificialFrames = createArtificialFrames(setOfFrames, numOfFrames, imf, indexIMFs)
+function artificialFrames = createArtificialFrames(setOfFrames, numOfFrames, imf, indexIMFs, seed)
 
+    % optional parameter when you want to generate the same permutations
+    if exist('seed', 'var')
+        rng(seed);
+    end
     % necessary to make the function backwards compatibility:
     %   in the previous version we only pass the number of max IMFs
     %   that a new frame should have. In that case, we build a new
