@@ -72,6 +72,10 @@ For matlab users, we provide a full process from building toy signals (num_sampl
 
 If you want to apply this method on your own data, you can reuse `./augment/toy_example.py` or `./augment/toyExample1.m` or `./augment/toyExample2.m` and replace the input parameters. In these `toy_example` code, we want to use the first 5 frames with the first 3 IMFs to generate 100 artificial frames, so you can customize which frames or IMFs are used to generate the artificial signal frames. 
 
+##### How to build appreciate data structure (cell array) for createArtificialFrames function?
+
+Please use `buildIMFsCellArray` function, the size of the input (imfs) should be (num_signals, num_frames, num_imfs, num_channels) or (num_signals, num_frames, num_imfs), and the output of the cellarray should be (num_frames, num_channels).
+
 ### Contact 
 
 Feel free to contact me with any questions, requests. It's always nice to know that I've helped someone or made their work easier. Contributing to the project is also acceptable and warmly welcomed.
